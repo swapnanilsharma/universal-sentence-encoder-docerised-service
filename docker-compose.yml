@@ -1,11 +1,11 @@
 version: '2'
 
 services:
-    flaskapp_swap:
+    universal-sentence-encoder-docerised-service:
         build: .
         ports: 
             - "2222:2222"
-        image: flaskapp_swap
-        container_name: flaskapp_swap
+        image: universal-sentence-encoder-docerised-service
+        container_name: universal-sentence-encoder-docerised-service
         environment:
             - VIRTUAL_HOST=flaskapp.swap.io

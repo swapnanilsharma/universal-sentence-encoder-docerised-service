@@ -18,7 +18,7 @@ embed = hub.load("/app/useModel")
 
 @app.route('/getvector',  methods=['POST'])
 def getvector():
-    searchString = request.args.get('searchString')  or request.get_json().get('searchString', '')
+    searchString = request.args.get('searchString') or request.get_json().get('searchString', '')
     embeddings = embed(searchString)
     searchVect = embeddings.numpy().tolist()
     for idx, vect in enumerate(searchVect):
